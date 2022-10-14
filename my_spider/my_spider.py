@@ -39,7 +39,7 @@ class crawl():
         print(self.url)
         self.web.get(self.url)
         _bot = find_element(self.web,by=By.XPATH,value='//form[@id="captcha-form"]')
-        if _bot==None:
+        if _bot!=None:
             time.sleep(100)
             _bot = find_element(self.web,by=By.XPATH,value='//form[@id="captcha-form"]')
         
